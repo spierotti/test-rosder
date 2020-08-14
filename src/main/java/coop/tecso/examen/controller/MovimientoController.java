@@ -62,12 +62,14 @@ public class MovimientoController {
     }
 	
 	// LISTADO DE MOVIMIENTOS POR CUENTA
-	@GetMapping("/find/{id}")
-	public List<MovimientoDto> findAll(@PathVariable("id") Integer id) {
+	@GetMapping("/cuenta/{nroCuenta}")
+	public List<MovimientoDto> findAll(@PathVariable("nroCuenta") Integer nroCuenta) {
+		
+		CuentaCorriente cuenta = cuentaCorrienteRepository.getOne(nroCuenta);
 		
 		List<MovimientoDto> result = new ArrayList<>();
 		
-		for (Movimiento entity : movimientoRepository.findAll()) {
+		for (Movimiento entity : movimientoRepository.findByNroCuenta(cuenta)) {
 			
 			MovimientoDto dto = new MovimientoDto();
 			
@@ -81,6 +83,6 @@ public class MovimientoController {
 			result.add(dto);
 		}
 		
-	    return result;
+		return result;
 	}
 }

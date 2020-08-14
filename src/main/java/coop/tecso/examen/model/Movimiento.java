@@ -29,7 +29,7 @@ public class Movimiento  implements Serializable{
 	private CuentaCorriente nroCuenta;
 	
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "fecha_movimiento", length = 20)
+    @Column(name = "fecha_movimiento")
     private Date fechaMovimiento;
 
     @Column(name = "tipo_movimiento")

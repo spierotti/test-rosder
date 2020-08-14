@@ -17,7 +17,7 @@ import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-public class CuentaCorriente  implements Serializable{
+public class CuentaCorriente implements Serializable{
 	
 	private static final long serialVersionUID = -2394858825624867930L;
 
