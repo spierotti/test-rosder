@@ -5,5 +5,7 @@ import java.math.BigDecimal;
 public interface MathService {
 	
 	public BigDecimal sumar(BigDecimal...val);
+	
+	public BigDecimal restar(BigDecimal...val);
 
 }

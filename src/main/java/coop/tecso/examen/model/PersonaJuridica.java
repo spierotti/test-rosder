@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 @Entity
 public class PersonaJuridica extends Persona {
 		
+	private static final long serialVersionUID = 606271947390641365L;
+
 	@Column(name = "razon_social",length = 100)
 	private String razonSocial;
 

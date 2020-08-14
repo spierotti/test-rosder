@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 @Entity
 public class PersonaFisica extends Persona {
 
+	private static final long serialVersionUID = 7050409084275644374L;
+
 	@Column(name = "nombre", length = 80)
 	private String nombre;
 	

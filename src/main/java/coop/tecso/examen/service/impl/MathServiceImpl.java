@@ -21,4 +21,18 @@ public class MathServiceImpl implements MathService {
 		return total;
 	}
 
+	@Override
+	public BigDecimal restar(BigDecimal... val) {
+		
+		BigDecimal total = BigDecimal.ZERO;
+		
+		for (BigDecimal param : val) {
+			total = total.add(param.setScale(2, BigDecimal.ROUND_HALF_UP));
+		}
+		
+		return total;
+	}
+	
+	
+
 }
